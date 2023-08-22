@@ -21,7 +21,7 @@ class FIFOCache(BaseCaching):
                 discarded_key = self.fifo_queue.popleft()
                 del self.cache_data[discarded_key]
                 print("DISCARD: {}".format(discarded_key))
-            
+
             self.cache_data[key] = item
             self.fifo_queue.append(key)
 
