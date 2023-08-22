@@ -17,7 +17,8 @@ class FIFOCache(BaseCaching):
         """Adds an item in the cache."""
 
         if key and item:
-            if len(self.cache_data) >= BaseCaching.MAX_ITEMS:
+            if len(self.cache_data) >= BaseCaching.MAX_ITEMS and\
+                    key not in self.cache_data:
                 discarded_key = self.fifo_queue.popleft()
                 del self.cache_data[discarded_key]
                 print("DISCARD: {}".format(discarded_key))
