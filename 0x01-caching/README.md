@@ -29,7 +29,7 @@ An introductory project on:
 
     **Execution Example**:
     ```
-    guillaume@ubuntu:~/0x01$ cat 0-main.py
+    Niyi@ubuntu:~/0x01$ cat 0-main.py
     #!/usr/bin/python3
     """ 0-main """
     BasicCache = __import__('0-basic_cache').BasicCache
@@ -51,7 +51,7 @@ An introductory project on:
     my_cache.print_cache()
     print(my_cache.get("A"))
     
-    guillaume@ubuntu:~/0x01$ ./0-main.py
+    Niyi@ubuntu:~/0x01$ ./0-main.py
     Current cache:
     Current cache:
     A: Hello
@@ -72,7 +72,7 @@ An introductory project on:
     D: School
     E: Battery
     Street
-    guillaume@ubuntu:~/0x01$
+    Niyi@ubuntu:~/0x01$
     ```
 
 2. [1-fifo_cache.py](./1-fifo_cache.py) - Create a class `FIFOCache` that inherits from [BaseCaching](./testFiles/base_caching.py) and is a caching system:
@@ -91,7 +91,7 @@ An introductory project on:
  
     **Execution Example**:
     ```
-    guillaume@ubuntu:~/0x01$ cat 1-main.py
+    Niyi@ubuntu:~/0x01$ cat 1-main.py
     #!/usr/bin/python3
     """ 1-main """
     FIFOCache = __import__('1-fifo_cache').FIFOCache
@@ -109,7 +109,7 @@ An introductory project on:
     my_cache.put("F", "Mission")
     my_cache.print_cache()
     
-    guillaume@ubuntu:~/0x01$ ./1-main.py
+    Niyi@ubuntu:~/0x01$ ./1-main.py
     Current cache:
     A: Hello
     B: World
@@ -132,7 +132,7 @@ An introductory project on:
     D: School
     E: Battery
     F: Mission
-    guillaume@ubuntu:~/0x01$ 
+    Niyi@ubuntu:~/0x01$ 
     ```
 
 3. [2-lifo_cache.py](./2-lifo_cache.py) - Create a class `LIFOCache` that inherits from [BaseCaching](./testFiles/base_caching.py) and is a caching system:
@@ -151,7 +151,7 @@ An introductory project on:
      
     **Execution Example**:
     ```
-    guillaume@ubuntu:~/0x01$ cat 2-main.py
+    Niyi@ubuntu:~/0x01$ cat 2-main.py
     #!/usr/bin/python3
     """ 2-main """
     LIFOCache = __import__('2-lifo_cache').LIFOCache
@@ -171,7 +171,7 @@ An introductory project on:
     my_cache.put("G", "San Francisco")
     my_cache.print_cache()
     
-    guillaume@ubuntu:~/0x01$ ./2-main.py
+    Niyi@ubuntu:~/0x01$ ./2-main.py
     Current cache:
     A: Hello
     B: World
@@ -200,7 +200,7 @@ An introductory project on:
     B: World
     E: Battery
     G: San Francisco
-    guillaume@ubuntu:~/0x01$
+    Niyi@ubuntu:~/0x01$
     ```
 
 4. [3-lru_cache.py](./3-lru_cache.py) - Create a class `LRUCache` that inherits from [BaseCaching](./testFiles/base_caching.py) and is a caching system:
@@ -219,7 +219,7 @@ An introductory project on:
      
     **Execution Example**:
     ```
-    guillaume@ubuntu:~/0x01$ cat 3-main.py
+    Niyi@ubuntu:~/0x01$ cat 3-main.py
     #!/usr/bin/python3
     """ 3-main """
     LRUCache = __import__('3-lru_cache').LRUCache
@@ -251,7 +251,7 @@ An introductory project on:
     my_cache.put("K", "K")
     my_cache.print_cache()
     
-    guillaume@ubuntu:~/0x01$ ./3-main.py
+    Niyi@ubuntu:~/0x01$ ./3-main.py
     Current cache:
     A: Hello
     B: World
@@ -308,7 +308,7 @@ An introductory project on:
     I: I
     J: J
     K: K
-    guillaume@ubuntu:~/0x01$
+    Niyi@ubuntu:~/0x01$
     ```
 
 5. [4-mru_cache.py](./4-mru_cache.py) - Create a class `MRUCache` that inherits from [BaseCaching](./testFiles/base_caching.py) and is a caching system:
@@ -327,7 +327,7 @@ An introductory project on:
  
     **Execution Example**:
     ```
-    guillaume@ubuntu:~/0x01$ cat 4-main.py
+    Niyi@ubuntu:~/0x01$ cat 4-main.py
     #!/usr/bin/python3
     """ 4-main """
     MRUCache = __import__('4-mru_cache').MRUCache
@@ -359,7 +359,7 @@ An introductory project on:
     my_cache.put("K", "K")
     my_cache.print_cache()
     
-    guillaume@ubuntu:~/0x01$ ./4-main.py
+    Niyi@ubuntu:~/0x01$ ./4-main.py
     Current cache:
     A: Hello
     B: World
@@ -416,7 +416,7 @@ An introductory project on:
     D: School
     E: Battery
     K: K
-    guillaume@ubuntu:~/0x01$
+    Niyi@ubuntu:~/0x01$
     ```
 
 6. [100-lfu_cache.py](./100-lfu_cache.py) - Create a class `LFUCache` that inherits from [BaseCaching](./testFiles/base_caching.py) and is a caching system:
@@ -436,7 +436,7 @@ An introductory project on:
      
     **Execution Example**:
     ```
-    guillaume@ubuntu:~/0x01$ cat 100-main.py
+    Niyi@ubuntu:~/0x01$ cat 100-main.py
     #!/usr/bin/python3
     """ 100-main """
     LFUCache = __import__('100-lfu_cache').LFUCache
@@ -478,7 +478,7 @@ An introductory project on:
     my_cache.put("M", "M")
     my_cache.print_cache()
     
-    guillaume@ubuntu:~/0x01$ ./100-main.py
+    Niyi@ubuntu:~/0x01$ ./100-main.py
     Current cache:
     A: Hello
     B: World
@@ -553,5 +553,5 @@ An introductory project on:
     H: H
     I: I
     M: M
-    guillaume@ubuntu:~/0x01$
+    Niyi@ubuntu:~/0x01$
     ```
