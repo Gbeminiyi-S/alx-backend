@@ -2,7 +2,7 @@
 """This module sets up a basic Flask app"""
 
 from flask import Flask, render_template, request, g
-from flask_babel import Babel, _
+from flask_babel import Babel
 app = Flask(__name__)
 babel = Babel(app)
 
@@ -41,6 +41,7 @@ def get_locale():
     if requested_locale and requested_locale in Config.LANGUAGES:
         return requested_locale
     return request.accept_languages.best_match(app.config['LANGUAGES'])
+
 
 def get_user():
     """Returns a user dictionary"""
