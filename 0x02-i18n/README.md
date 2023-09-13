@@ -18,3 +18,13 @@ An introductory project on:
    - Uses that class as config for the Flask app.
 
 3. [2-app.py](./2-app.py) [templates/2-index.html](./templates/2-index.html) - a `get_locale` function with the `babel.localeselector` decorator. Uses `request.accept_languages` to determine the best match with our supported languages.
+
+4. [3-app.py](./3-app.py) [templates/3-index.html](./templates/3-index.html) - 
+
+5. [4-app.py](./4-app.py) [templates/4-index.html](./templates/4-index.html) - implement a way to force a particular locale by passing the `locale=fr` parameter to your app’s URLs.
+   - In the `get_locale` function, detect if the incoming request contains `locale` argument and if its value is a supported locale, return it. 
+   - If not or if the parameter is not present, resort to the previous default behavior.
+
+   - Now you should be able to test different translations by visiting `http://127.0.0.1:5000?locale=[fr|en]`.
+
+    Visiting `http://127.0.0.1:5000/?locale=fr` should display this level 1 heading: _Bonjour monde_
