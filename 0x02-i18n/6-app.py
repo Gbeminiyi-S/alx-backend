@@ -13,9 +13,6 @@ class Config(object):
     BABEL_DEFAULT_LOCALE = "en"
     BABEL_DEFAULT_TIMEZONE = "UTC"
 
-
-app.config.from_object(Config)
-
 users = {
     1: {"name": "Balou", "locale": "fr", "timezone": "Europe/Paris"},
     2: {"name": "Beyonce", "locale": "en", "timezone": "US/Central"},
@@ -34,16 +31,17 @@ def index_page():
 def get_locale():
     """Selects a language translation to use for request by order of priority
     """
-    url_match = request.args.get('locale', None)
-    best_match = request.accept_languages.best_match(app.config['LANGUAGES'])
-    global_match = g.user.get('locale', None)
-
-    locales = [url_match, best_match, global_match]
+    locales = [
+        request.args.get('locale'),
+        g.user.get('locale', None) if g.user else None,
+        request.accept_languages.best_match(Config.LANGUAGES),
+        Config.BABEL_DEFAULT_LOCALE
+    ]
 
     for locale in locales:
         if locale and locale in Config.LANGUAGES:
             return locale
-    return Config.BABEL_DEFAULT_LOCALE
+
 
 def get_user():
     """Returns a user dictionary"""
@@ -63,4 +61,3 @@ def get_user():
 def before_request():
     """Finds the user"""
     g.user = get_user()
-
