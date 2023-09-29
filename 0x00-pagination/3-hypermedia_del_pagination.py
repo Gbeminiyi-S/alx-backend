@@ -51,9 +51,6 @@ class Server:
         # Retrieve the current page of data
         data = self.__dataset[index:next_index]
 
-        # Update the current index for the instance
-        index = next_index
-
         return {
             "index": index,
             "data": data,
